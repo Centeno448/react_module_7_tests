@@ -12,8 +12,6 @@ beforeAll(() => {
   configure({ adapter: new Adapter() });
 });
 
-const tarea = {id: "caced729-15c2-45ad-aa26-58c05283a4cc", nombre: "Nueva", completado: false}
-
 test('App.js tiene 1 componente hijo TareasLista.js | Asegúrate de renderizar 1 vez el componente <TareasLista> dentro de App.js', () => {
   const wrapper = shallow(<App />);
   expect(wrapper.find(TareasLista).length).toBe(1);
